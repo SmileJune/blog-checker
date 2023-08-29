@@ -31,7 +31,8 @@ jobs:
     
     - name: Test with pytest
       run: |
-        pytest > test_result_today.txt
+        timedatectl >> test_result_today.txt
+        pytest >> test_result_today.txt
         cat test_result_today.txt >> test_result.txt
 
     - name: send mail
