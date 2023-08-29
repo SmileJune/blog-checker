@@ -46,8 +46,4 @@ jobs:
         git config --global user.name "SmileJune"
         git add test_result.txt
         git commit -m "Update test results"
-    
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.MY_GITHUB_TOKEN }}
+        git push
