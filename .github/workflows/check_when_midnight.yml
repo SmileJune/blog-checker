@@ -1,0 +1,35 @@
+name: Run Pytest and Update Result
+
+on:
+  schedule:
+    - cron: '0 15 * * *'
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # 필요한 패키지 설치
+
+    - name: Run pytest
+      run: pytest >> test_result.txt  # 필요한 pytest 실행 명령어로 변경
+
+    - name: Update GitHub repository
+      env:
+        GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+      run: |
+        git add test_result.txt
+        git commit -m "Update test results"
+        git push
+
