@@ -31,6 +31,8 @@ jobs:
 
     - name: Commit files
       run: |
+        git config --global user.email "godhkekf24@inha.edu"
+        git config --global user.name "SmileJune"
         git add test_result.txt
         git commit -m "Update test results"
     
