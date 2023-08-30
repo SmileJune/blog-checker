@@ -15,4 +15,5 @@ GMAIL_ID=${GMAIL_ID}
 ```
 4. 해당 코드는 GHA bot이 자동 커밋을 해주기 때문에 해당 권한 설정이 필요하다. 레포지토리 Setting-Actions-General에서 Workflow permissions 설정을 Read and Write permissions로 해주고 Save를 누른다.
 <img width="577" alt="스크린샷 2023-08-30 오후 1 18 08" src="https://github.com/SmileJune/blog-checker/assets/91049936/7b3a97a1-1636-4c25-8d6a-8ff1facf7595">
+
 5. main 브랜치에 푸시해서 정상적으로 작동하는지 확인한다.
