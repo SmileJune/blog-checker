@@ -11,8 +11,9 @@ def zero_blog_checker():
 
     matches = re.findall(updated_at_regex, response)
 
-    yesterday = date.today() - timedelta(days=1)
+    yesterday = date.today() - timedelta(days=1) + timedelta(hours=9)
     yesterday = yesterday.strftime("%Y-%m-%d")
+    print("기준 날짜 : " + yesterday)
     
     for match in matches:
         if match == yesterday:
