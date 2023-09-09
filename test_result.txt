@@ -202,3 +202,18 @@ collected 1 item
 test_zero_blog_checker.py .                                              [100%]
 
 ============================== 1 passed in 1.79s ===============================
+               Local time: Sat 2023-09-09 15:01:29 UTC
+           Universal time: Sat 2023-09-09 15:01:29 UTC
+                 RTC time: Sat 2023-09-09 15:01:29
+                Time zone: Etc/UTC (UTC, +0000)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.0, pluggy-1.3.0
+rootdir: /home/runner/work/blog-checker/blog-checker
+collected 1 item
+
+test_zero_blog_checker.py .                                              [100%]
+
+============================== 1 passed in 1.90s ===============================
